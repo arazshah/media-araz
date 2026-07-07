@@ -1,7 +1,6 @@
 services:
   media-nginx:
     image: nginx:alpine
-    container_name: araz-media-nginx
     restart: unless-stopped
     volumes:
       - media_data:/usr/share/nginx/html:ro
@@ -14,7 +13,6 @@ services:
 
   filebrowser:
     image: filebrowser/filebrowser:latest
-    container_name: araz-filebrowser
     restart: unless-stopped
     command:
       - "--address=0.0.0.0"
